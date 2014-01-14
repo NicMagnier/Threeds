@@ -1,0 +1,490 @@
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	background-image: url(subtle_zebra_3d.png);
+	font-family: Proxima, Helvetica, Arial;
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #66C;
+	text-decoration: none;
+}
+h2 span {
+	font-size: 0.6em;
+	font-weight: 100;
+	margin: 1em;
+	text-shadow: none;
+}
+
+.embossText {
+	text-shadow: 0px 2px 0px white;
+}
+
+#container {
+	position: relative;
+	width: 640px;
+	margin: auto;
+	top: 0;
+	
+	background-color: #EAEDEA;
+	color: #888;
+	
+	border: 1px solid #DDD;
+	padding: 170px 0 10px;
+	
+	z-index: 10;
+}
+
+#uploadform {
+	visibility:hidden;
+	position:fixed;
+	top:0;
+}
+
+#fixedtop {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	
+	z-index: 100;
+}
+#header {
+	position: relative;
+	margin: auto;
+	width: 700px;
+	height: 120px;
+	top: 0;
+
+	background-image: url(headershadow.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;	
+}
+#header_content {
+	height: 100px;
+	background-color: #CC0000;
+}
+
+#header h1 {
+	padding: 0.5em;
+	margin: 0;
+	color: #FFF;
+	font-weight: 100;
+}
+#header h1 span {
+	display: block;
+	font-size: 0.3em;
+	font-weight: 800;
+}
+#header a {
+	text-decoration: none;
+}
+
+#qr {
+	position: absolute;
+	right: 40px;
+	top: 8px;
+}
+#qrtips {
+	position: absolute;
+	right: 130px;
+	top: 14px;
+	width: 100px;
+	font-size: 12px;
+	text-align: right;
+	color: white;
+}
+
+#footer {
+	margin-top: 2em;
+	clear: both;
+	font-size: 0.7em;
+}
+#footerlinks {
+	text-align: center;
+	font-size: 0.9em;
+}
+
+/* Top menu */
+#menu {
+	position: absolute;
+	left: 35px;
+	top: 115px;
+	height: 25px;
+	padding: 0;
+	margin: 0;
+
+}
+
+#menu ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+#menu li{
+	display: inline;
+}
+
+#menu ul.big li a {
+	background-color: #CC0000;
+	padding: 0.5em;
+	text-shadow: 2px 2px 0px #8a0000;
+	box-shadow: 0 3px 0 rgba(43,43,43,0.3);
+	color: white;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+#menu ul.small {
+	display: inline-block;
+	width: 350px;
+	
+	font-size: 0.7em;
+	color: #555;
+	background-color: rgba(234,234,234,0.75);
+	padding: 0.5em 1em;
+}
+
+#menu ul.small li:after {
+	content: '●';
+	margin-left: 5px;
+}
+
+
+/* Some standard block */
+div.blockContent {
+	background-color: white;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	margin: 1em 0;
+	padding: 0.2em;
+}
+.error {
+	text-align: center;
+	color: red;
+}
+.notification {
+	text-align: center;
+	background-color: #FAF8CC !important;
+	font-size: 0.8em;
+}
+
+.wiggleContainer {
+	position: relative;
+}
+.wiggleEvent, .wiggleFront, .wiggleBack {
+	position: absolute;
+	top: 0;
+	width:  100%;
+}
+
+/* Single & Double Column Blocks */
+div.sBlock {
+	width: 552px;
+	margin: auto;
+}
+
+div.dcBlock {
+	width: 300px;
+	margin: 10px;
+}
+
+.dcRight {
+	float: right;	
+	min-height: 100%;
+}
+.dcLeft {
+	float: left;	
+	min-height: 100%;
+}
+
+/*  Forms */
+
+.hiddenFileInput {
+	position: fixed;
+	visibility: hidden;
+}
+
+.form500 {
+	width: 500px;
+	margin: auto;
+}
+
+.dcBlock .form500 {
+	width: 250px;
+}
+
+.formBlock {
+	background: #464646;
+	color: #EEE;
+	border-radius: 5px;
+	margin-bottom: 2em;
+	padding: 1em;
+}
+.formBlock h2 {
+	margin-top: 0;
+	font-weight: 100;
+}
+.formBlock a {
+	color: #CCF;
+}
+
+.form500 textarea, .form500 select{
+	display: block;
+	width: 400px;
+	margin: auto;
+	height: 50px;
+	font-size: 14px;
+}
+.form500 input, .form500 label {
+	display: block;
+	width: 200px;
+	margin: auto;
+	font-size: 18px;
+}
+.form500 label {
+	width: 100%;
+	text-align: center;
+}
+
+label.cbinput {
+	width: 300px;
+	text-align: left;
+	line-height: 1em;
+	font-size: 0.8em;
+	vertical-align: middle;
+}
+input.cbinput {
+	float: left;
+	display: inline;
+	width: auto;
+	margin-right: 0.5em;
+}
+
+/* Wiggle controls */
+#wiggleControl {
+	display: none;
+	padding: 10px;
+}
+.wcSpeed {
+	color: #66C;
+	cursor: default;
+	font-size: 1em;
+	padding: 0 0.5em;
+}
+.wcSpeedSelected {
+	background-color: #66C;
+	color: white;
+	font-weight: bold;
+}
+
+
+.previous {float: left;}
+.next {float: right;}
+
+/* NEW IMAGE */
+.imgCanvas {
+	overflow: hidden;
+}
+.imgCanvas img {
+	display: block; /* otherwise picture is inline and has a space under it */
+	clear: both;
+}
+.blockFull {
+	background-image: url(paven.png);
+	border-top: 1px solid #DDD;
+	width: 640px;
+}
+.blockThumb {
+	width: 128px;
+	display: inline-block;
+	margin: 5px;
+}
+.mposhortcut {
+	display: none;
+}
+.imgCenter {
+	position: relative;
+	float: left;
+	left: 50%;
+}
+.imgContainer {
+	position: relative;
+	left: -50%;
+	max-width: 640px;
+}
+.unfloat {
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
+/* in case the wiggle.js crash, we align the <img> so that we see only one side */
+.noWiggleScript .imgCenter, .noWiggleScript .imgContainer {
+	left: 0 !important;
+}
+
+/* NEW IMAGE MENU */
+.imgMenu {
+	border-bottom: 1px solid #DDD;
+	margin-bottom: 3em;
+}
+.description {
+	background-color: white;
+	padding: 0.5em 1em 1.5em 1em;
+	color: #222;
+	text-align: center;
+	font-size: 1.1em;
+}
+.description textarea {
+	background-color: #FFE;
+	text-align: center;
+	width: 100%;
+}
+.signature {
+	font-size: 0.8em;
+	float: right;
+	font-weight: 100;	
+}
+.menuBar {
+	font-size: 0.7em;
+	line-height:30px;
+	height: 30px;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+.menuParallax {
+	background-color: #222;
+}
+.menuParallax span {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+.menuParallax input {
+	display: inline;
+	font-size: 10px;
+	width: 30px;
+	text-align: center;
+	color: #DDD;
+	background-color: #444;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+}
+.menuParallax .tips {
+	float: right;
+	font-weight: bold;
+}
+
+.menuSave {
+	background-color: #CC0000;
+	color: white;
+	font-weight: bold;
+}
+.menuSave a {
+	color: #CCF;
+	text-decoration: underline;
+}
+.menuSave > * {
+	float: right;
+}
+.saving {
+	background: url(loading.gif) center right no-repeat;
+	padding-right: 20px;
+	
+}
+.menuParallax .pctrl {
+	cursor: default;
+}
+
+.menuDelete {
+	font-size: 0.7em;
+	background-color: white;
+}
+.menuDelete a {
+	color: red;
+}
+
+.menuShare {
+	background-color: #FAFAFA;
+}
+
+/*
+UploadiFive
+Copyright (c) 2012 Reactive Apps, Ronnie Garcia
+*/
+.uploadifive-button {
+	background-color: #505050;
+	background-image: linear-gradient(bottom, #505050 0%, #707070 100%);
+	background-image: -o-linear-gradient(bottom, #505050 0%, #707070 100%);
+	background-image: -moz-linear-gradient(bottom, #505050 0%, #707070 100%);
+	background-image: -webkit-linear-gradient(bottom, #505050 0%, #707070 100%);
+	background-image: -ms-linear-gradient(bottom, #505050 0%, #707070 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #505050),
+		color-stop(1, #707070)
+	);
+	background-position: center top;
+	background-repeat: no-repeat;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 2px solid #808080;
+	color: #FFF;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	text-transform: uppercase;
+	width: 100%;
+}
+.uploadifive-button:hover {
+	background-color: #606060;
+	background-image: linear-gradient(top, #606060 0%, #808080 100%);
+	background-image: -o-linear-gradient(top, #606060 0%, #808080 100%);
+	background-image: -moz-linear-gradient(top, #606060 0%, #808080 100%);
+	background-image: -webkit-linear-gradient(top, #606060 0%, #808080 100%);
+	background-image: -ms-linear-gradient(top, #606060 0%, #808080 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #606060),
+		color-stop(1, #808080)
+	);
+	background-position: center bottom;
+}
+.uploadifive-queue-item {
+	background-color: #F5F5F5;
+	border-bottom: 1px dotted #D5D5D5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font: 12px Arial, Helvetica, Sans-serif;
+	margin-top: 3px;
+	padding: 15px;
+	color: #464646;
+}
+.uploadifive-queue-item .close {
+	background: url('uploadifive-cancel.png') 0 0 no-repeat;
+	display: block;
+	float: right;
+	height: 16px;
+	text-indent: -9999px;
+	width: 16px;
+}
+.uploadifive-queue-item .progress {
+	border: 1px solid #D0D0D0;
+	height: 3px;
+	margin-top: 5px;
+	width: 100%;
+}
+.uploadifive-queue-item .progress-bar {
+	background-color: #0072BC;
+	height: 3px;
+	width: 0;
+}
